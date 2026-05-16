@@ -1,0 +1,1570 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#"
+     xml:base="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness/2.0"/>
+        <rdfs:comment xml:lang="en">An OWL 2 ontology modelling gyms, members, trainers, workout plans, exercises, equipment, diet plans, supplements, health records, and fitness goals.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gym and Fitness Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#achievesGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#achievesGoal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#assignedToMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#assignedToMember">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasWorkoutPlan"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#attendsGym -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#attendsGym">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasAttendee"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:comment xml:lang="en">Relates a Member to the Gym they attend.</rdfs:comment>
+        <rdfs:label xml:lang="en">attendsGym</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#belongsToGym -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#belongsToGym">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:label xml:lang="en">belongsToGym</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#consumesSupplement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#consumesSupplement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:label xml:lang="en">consumesSupplement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#createsDietPlan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#createsDietPlan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Nutritionist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:label xml:lang="en">createsDietPlan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#createsWorkoutPlan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#createsWorkoutPlan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:label xml:lang="en">createsWorkoutPlan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#followedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#followedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#followsDietPlan"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#followsDietPlan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#followsDietPlan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:label xml:lang="en">followsDietPlan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasAttendee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasAttendee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasHealthRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasHealthRecord">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:label xml:lang="en">hasHealthRecord</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasMembership -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasMembership">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#memberOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:label xml:lang="en">hasMembership</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasWorkoutPlan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasWorkoutPlan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:label xml:lang="en">hasWorkoutPlan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#improvesHealth -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#improvesHealth">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#includesExercise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#includesExercise">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:label xml:lang="en">includesExercise</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#includesNutritionPlan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#includesNutritionPlan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:label xml:lang="en">includesNutritionPlan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#includesSupplement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#includesSupplement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#managesGym -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#managesGym">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:label xml:lang="en">managesGym</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#memberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#memberOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#monitorsProgress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#monitorsProgress">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
+        <rdfs:label xml:lang="en">monitorsProgress</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#offersClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#offersClass">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:label xml:lang="en">offersClass</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ownedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ownedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#owns"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#owns -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#owns">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#performsExercise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#performsExercise">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#progressTrackedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#progressTrackedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#recommendedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#recommendedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Nutritionist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#requiresEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#requiresEquipment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+        <rdfs:label xml:lang="en">requiresEquipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supervisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supervisedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetsGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetsGoal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:label xml:lang="en">targetsGoal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#tracksBMI -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#tracksBMI">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#trainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#trainedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#trains"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:comment xml:lang="en">Relates a Member to their assigned Trainer.</rdfs:comment>
+        <rdfs:label xml:lang="en">trainedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#trains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#trains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment xml:lang="en">Inverse of trainedBy. Relates a Trainer to the Member they train.</rdfs:comment>
+        <rdfs:label xml:lang="en">trains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#usesEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#usesEquipment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMI">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#caloriesBurned -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#caloriesBurned">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#caloriesPerServing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#caloriesPerServing">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#capacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#establishedYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#establishedYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#exerciseDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#exerciseDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#exerciseIntensity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#exerciseIntensity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#goalTarget -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#goalTarget">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#gymLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#gymLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#height">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#joinDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#joinDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#membershipDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#membershipDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#membershipFee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#membershipFee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#phoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#phoneNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#progressDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#progressDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#proteinPerServing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#proteinPerServing">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#repetitions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#repetitions">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#repsPerSet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#repsPerSet">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#sessionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#sessionDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#sets -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#sets">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#specialization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#specialization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supplementDosage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supplementDosage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetBMI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetBMI">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetWeight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#weight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#workoutLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#workoutLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#yearsOfExperience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#yearsOfExperience">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedWorkoutPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedWorkoutPlan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BasicMembership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BasicMembership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerWorkoutPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerWorkoutPlan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BodyBuilding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BodyBuilding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan">
+        <rdfs:label xml:lang="en">DietPlan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Endurance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Endurance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment">
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise">
+        <rdfs:comment xml:lang="en">A physical activity performed as part of a workout plan.</rdfs:comment>
+        <rdfs:label xml:lang="en">Exercise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FatLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FatLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal">
+        <rdfs:label xml:lang="en">FitnessGoal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FlexibilityExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FlexibilityExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FreeWeightEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FreeWeightEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym">
+        <rdfs:comment xml:lang="en">A physical fitness facility where members exercise.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gym</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
+        <rdfs:label xml:lang="en">GymOwner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HIITExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HIITExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord">
+        <rdfs:label xml:lang="en">HealthRecord</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinDiet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinDiet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#IntermediateWorkoutPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#IntermediateWorkoutPlan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDiet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDiet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MachineEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MachineEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MassGainer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MassGainer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
+        <rdfs:comment xml:lang="en">A person with an active or past gym membership.</rdfs:comment>
+        <rdfs:label xml:lang="en">Member</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership">
+        <rdfs:label xml:lang="en">Membership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGainDiet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGainDiet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Nutritionist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Nutritionist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
+        <rdfs:label xml:lang="en">Nutritionist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PreWorkoutSupplement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PreWorkoutSupplement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PremiumMembership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PremiumMembership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ProteinSupplement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ProteinSupplement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ResistanceEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ResistanceEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
+        <rdfs:comment xml:lang="en">Any person employed by or operating a gym (trainers, nutritionists, owners).</rdfs:comment>
+        <rdfs:label xml:lang="en">Staff</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#StrengthExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#StrengthExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement">
+        <rdfs:label xml:lang="en">Supplement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
+        <rdfs:comment xml:lang="en">A certified fitness professional who designs and supervises workout plans.</rdfs:comment>
+        <rdfs:label xml:lang="en">Trainer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VIPMembership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VIPMembership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VeganDiet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VeganDiet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VitaminSupplement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VitaminSupplement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLossDiet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLossDiet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan">
+        <rdfs:label xml:lang="en">WorkoutPlan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#YogaExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#YogaExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedStrengthPlan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedStrengthPlan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedWorkoutPlan"/>
+        <includesExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BenchPress"/>
+        <includesNutritionPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinMealPlan"/>
+        <sets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</sets>
+        <workoutLevel>Advanced</workoutLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AhmedTrainer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AhmedTrainer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <belongsToGym rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym"/>
+        <createsWorkoutPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedStrengthPlan"/>
+        <createsWorkoutPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerPlan"/>
+        <monitorsProgress rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliProgress_May2026"/>
+        <trains rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Ali"/>
+        <trains rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Hamza"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+        <email>ahmed.trainer@fitzoneGym.com</email>
+        <gender>Male</gender>
+        <name>Ahmed Khan</name>
+        <phoneNumber>+923009876543</phoneNumber>
+        <specialization>Weight Training and Strength Conditioning</specialization>
+        <yearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</yearsOfExperience>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Ali -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Ali">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <attendsGym rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym"/>
+        <consumesSupplement rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WheyProteinX"/>
+        <followsDietPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDietPlan"/>
+        <hasHealthRecord rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliBMIRecord"/>
+        <hasHealthRecord rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliProgress_May2026"/>
+        <hasMembership rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliBasicMembership"/>
+        <hasWorkoutPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerPlan"/>
+        <performsExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BenchPress"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AhmedTrainer"/>
+        <targetsGoal rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGainGoal"/>
+        <trainedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AhmedTrainer"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</age>
+        <email>ali.raza@gmail.com</email>
+        <gender>Male</gender>
+        <name>Ali Raza</name>
+        <phoneNumber>+923331234567</phoneNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliBMIRecord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliBMIRecord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord"/>
+        <BMI rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.67</BMI>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#float">175.0</height>
+        <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">72.5</weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliBasicMembership -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliBasicMembership">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BasicMembership"/>
+        <joinDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-01</joinDate>
+        <membershipDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</membershipDuration>
+        <membershipFee rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2500.0</membershipFee>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliProgress_May2026 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliProgress_May2026">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
+        <progressTrackedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AhmedTrainer"/>
+        <caloriesBurned rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</caloriesBurned>
+        <progressDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-17</progressDate>
+        <sessionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-17</sessionDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerPlan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerPlan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerWorkoutPlan"/>
+        <includesExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BenchPress"/>
+        <includesNutritionPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDietPlan"/>
+        <sets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sets>
+        <workoutLevel>Beginner</workoutLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BenchPress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BenchPress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#StrengthExercise"/>
+        <requiresEquipment rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#OlympicBarbell"/>
+        <caloriesBurned rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</caloriesBurned>
+        <description>A compound chest strength exercise using a barbell on a flat bench.</description>
+        <exerciseDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</exerciseDuration>
+        <exerciseIntensity>High</exerciseIntensity>
+        <repetitions rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</repetitions>
+        <repsPerSet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</repsPerSet>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#C4PreWorkout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#C4PreWorkout">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PreWorkoutSupplement"/>
+        <caloriesPerServing rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</caloriesPerServing>
+        <proteinPerServing rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</proteinPerServing>
+        <supplementDosage>6g per serving, 30 minutes before workout</supplementDosage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DrFatima -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DrFatima">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Nutritionist"/>
+        <belongsToGym rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym"/>
+        <createsDietPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinMealPlan"/>
+        <createsDietPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDietPlan"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+        <email>fatima.nutritionist@fitzoneGym.com</email>
+        <gender>Female</gender>
+        <name>Dr. Fatima Noor</name>
+        <specialization>Sports Nutrition and Dietetics</specialization>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#EndurancePlan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#EndurancePlan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#IntermediateWorkoutPlan"/>
+        <includesExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MorningSunSalutation"/>
+        <includesExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Treadmill30Min"/>
+        <sets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sets>
+        <workoutLevel>Intermediate</workoutLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <offersClass rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AliBasicMembership"/>
+        <offersClass rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HamzaVIPMembership"/>
+        <ownedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#OwnerKhalid"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</capacity>
+        <establishedYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2018</establishedYear>
+        <gymLocation>Sargodha, Punjab, Pakistan</gymLocation>
+        <name>FitZone Gym</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Hamza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Hamza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <attendsGym rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym"/>
+        <consumesSupplement rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#C4PreWorkout"/>
+        <consumesSupplement rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WheyProteinX"/>
+        <followsDietPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinMealPlan"/>
+        <hasHealthRecord rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HamzaWeightRecord"/>
+        <hasMembership rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HamzaVIPMembership"/>
+        <hasWorkoutPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedStrengthPlan"/>
+        <performsExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BenchPress"/>
+        <targetsGoal rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGainGoal"/>
+        <trainedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AhmedTrainer"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</age>
+        <email>hamza.tariq@gmail.com</email>
+        <gender>Male</gender>
+        <name>Hamza Tariq</name>
+        <phoneNumber>+923459876543</phoneNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HamzaVIPMembership -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HamzaVIPMembership">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VIPMembership"/>
+        <joinDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-01</joinDate>
+        <membershipDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</membershipDuration>
+        <membershipFee rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12000.0</membershipFee>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HamzaWeightRecord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HamzaWeightRecord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightRecord"/>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#float">182.0</height>
+        <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">88.0</weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinMealPlan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinMealPlan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinDiet"/>
+        <includesSupplement rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WheyProteinX"/>
+        <recommendedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DrFatima"/>
+        <goalTarget>Muscle Gain and Recovery</goalTarget>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDietPlan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDietPlan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDiet"/>
+        <recommendedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DrFatima"/>
+        <goalTarget>Weight Loss through ketosis</goalTarget>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MorningSunSalutation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MorningSunSalutation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#YogaExercise"/>
+        <requiresEquipment rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ResistanceBand"/>
+        <caloriesBurned rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</caloriesBurned>
+        <description>A sequence of 12 yoga poses performed in a flowing sequence for flexibility and mindfulness.</description>
+        <exerciseDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</exerciseDuration>
+        <exerciseIntensity>Low</exerciseIntensity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGainGoal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGainGoal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGain"/>
+        <goalTarget>Gain 5 kg of lean muscle in 6 months</goalTarget>
+        <targetWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80.0</targetWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#OlympicBarbell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#OlympicBarbell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FreeWeightEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Omar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Omar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <attendsGym rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym"/>
+        <hasWorkoutPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#EndurancePlan"/>
+        <performsExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Treadmill30Min"/>
+        <targetsGoal rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLossGoal"/>
+        <trainedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#SaraTrainer"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</age>
+        <email>omar.farooq@gmail.com</email>
+        <gender>Male</gender>
+        <name>Omar Farooq</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#OwnerKhalid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#OwnerKhalid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner"/>
+        <managesGym rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym"/>
+        <owns rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+        <email>khalid@fitzoneGym.com</email>
+        <name>Khalid Mahmood</name>
+        <phoneNumber>+923001234567</phoneNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PowerHouseGym -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PowerHouseGym">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</capacity>
+        <establishedYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</establishedYear>
+        <gymLocation>Lahore, Punjab, Pakistan</gymLocation>
+        <name>PowerHouse Gym</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ResistanceBand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ResistanceBand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ResistanceEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#SaraTrainer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#SaraTrainer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <belongsToGym rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitZoneGym"/>
+        <createsWorkoutPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#EndurancePlan"/>
+        <trains rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Omar"/>
+        <trains rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Zara"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
+        <email>sara.trainer@fitzoneGym.com</email>
+        <gender>Female</gender>
+        <name>Sara Malik</name>
+        <specialization>Cardio and Endurance Training</specialization>
+        <yearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</yearsOfExperience>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Treadmill30Min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Treadmill30Min">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioExercise"/>
+        <requiresEquipment rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#TreadmillMachine"/>
+        <caloriesBurned rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</caloriesBurned>
+        <description>30-minute moderate-pace treadmill run for cardiovascular fitness.</description>
+        <exerciseDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</exerciseDuration>
+        <exerciseIntensity>Moderate</exerciseIntensity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#TreadmillMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#TreadmillMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLossGoal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLossGoal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLoss"/>
+        <goalTarget>Lose 8 kg in 3 months</goalTarget>
+        <targetBMI rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.5</targetBMI>
+        <targetWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65.0</targetWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WheyProteinX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WheyProteinX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ProteinSupplement"/>
+        <caloriesPerServing rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</caloriesPerServing>
+        <proteinPerServing rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</proteinPerServing>
+        <supplementDosage>30g per serving, twice daily</supplementDosage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Zara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Zara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <attendsGym rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PowerHouseGym"/>
+        <followsDietPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDietPlan"/>
+        <hasWorkoutPlan rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#EndurancePlan"/>
+        <performsExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MorningSunSalutation"/>
+        <performsExercise rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Treadmill30Min"/>
+        <targetsGoal rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLossGoal"/>
+        <trainedBy rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#SaraTrainer"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</age>
+        <email>zara.ahmad@gmail.com</email>
+        <gender>Female</gender>
+        <name>Zara Ahmad</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedWorkoutPlan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerWorkoutPlan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#IntermediateWorkoutPlan"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightRecord"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BasicMembership"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PremiumMembership"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VIPMembership"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BodyBuilding"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Endurance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FatLoss"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLoss"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioExercise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FlexibilityExercise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HIITExercise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#StrengthExercise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#YogaExercise"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FreeWeightEquipment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MachineEquipment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ResistanceEquipment"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinDiet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDiet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGainDiet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VeganDiet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLossDiet"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MassGainer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PreWorkoutSupplement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ProteinSupplement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VitaminSupplement"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
