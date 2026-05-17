@@ -54,6 +54,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#goalAchievedBy"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:comment>achieves Goal defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>achieves Goal</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -65,6 +67,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>assigned To Member defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>assigned To Member</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -76,6 +80,8 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:comment xml:lang="en">Relates a Member to the Gym they attend.</rdfs:comment>
+        <rdfs:comment>attends Gym defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>attends Gym</rdfs:label>
         <rdfs:label xml:lang="en">attendsGym</rdfs:label>
     </owl:ObjectProperty>
     
@@ -87,6 +93,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasStaff"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:comment>belongs To Gym defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>belongs To Gym</rdfs:label>
         <rdfs:label xml:lang="en">belongsToGym</rdfs:label>
     </owl:ObjectProperty>
     
@@ -98,6 +106,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#tracksBMI"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:comment>bmi Tracked By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>bmi Tracked By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -108,6 +118,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#offersClass"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:comment>class Offered By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>class Offered By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -118,6 +130,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supplementConsumedBy"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:comment>consumes Supplement defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>consumes Supplement</rdfs:label>
         <rdfs:label xml:lang="en">consumesSupplement</rdfs:label>
     </owl:ObjectProperty>
     
@@ -129,6 +143,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#recommendedBy"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Nutritionist"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>creates Diet Plan defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>creates Diet Plan</rdfs:label>
         <rdfs:label xml:lang="en">createsDietPlan</rdfs:label>
     </owl:ObjectProperty>
     
@@ -140,6 +156,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#workoutPlanCreatedBy"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:comment>creates Workout Plan defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>creates Workout Plan</rdfs:label>
         <rdfs:label xml:lang="en">createsWorkoutPlan</rdfs:label>
     </owl:ObjectProperty>
     
@@ -151,6 +169,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#requiresEquipment"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>equipment Required By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>equipment Required By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -161,6 +181,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#usesEquipment"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>equipment Used By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>equipment Used By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -171,6 +193,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#includesExercise"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:comment>exercise Included In defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>exercise Included In</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -181,6 +205,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#performsExercise"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>exercise Performed By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>exercise Performed By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -191,6 +217,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#followsDietPlan"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>followed By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>followed By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -200,6 +228,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#followsDietPlan">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>follows Diet Plan defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>follows Diet Plan</rdfs:label>
         <rdfs:label xml:lang="en">followsDietPlan</rdfs:label>
     </owl:ObjectProperty>
     
@@ -210,6 +240,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#goalAchievedBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>goal Achieved By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>goal Achieved By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -220,6 +252,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetsGoal"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>goal Targeted By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>goal Targeted By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -230,6 +264,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#managesGym"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner"/>
+        <rdfs:comment>gym Managed By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>gym Managed By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -239,6 +275,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasAttendee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>has Attendee defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>has Attendee</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -249,6 +287,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#healthRecordOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:comment>has Health Record defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>has Health Record</rdfs:label>
         <rdfs:label xml:lang="en">hasHealthRecord</rdfs:label>
     </owl:ObjectProperty>
     
@@ -260,6 +300,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#memberOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:comment>has Membership defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>has Membership</rdfs:label>
         <rdfs:label xml:lang="en">hasMembership</rdfs:label>
     </owl:ObjectProperty>
     
@@ -270,6 +312,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasStaff">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
+        <rdfs:comment>has Staff defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>has Staff</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -279,6 +323,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#hasWorkoutPlan">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:comment>has Workout Plan defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>has Workout Plan</rdfs:label>
         <rdfs:label xml:lang="en">hasWorkoutPlan</rdfs:label>
     </owl:ObjectProperty>
     
@@ -290,6 +336,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#improvesHealth"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:comment>health Improved By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>health Improved By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -299,6 +347,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#healthRecordOf">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>health Record Of defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>health Record Of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -308,6 +358,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#improvesHealth">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:comment>improves Health defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>improves Health</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -317,6 +369,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#includesExercise">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>includes Exercise defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>includes Exercise</rdfs:label>
         <rdfs:label xml:lang="en">includesExercise</rdfs:label>
     </owl:ObjectProperty>
     
@@ -328,6 +382,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#nutritionPlanIncludedIn"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>includes Nutrition Plan defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>includes Nutrition Plan</rdfs:label>
         <rdfs:label xml:lang="en">includesNutritionPlan</rdfs:label>
     </owl:ObjectProperty>
     
@@ -339,6 +395,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supplementIncludedIn"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:comment>includes Supplement defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>includes Supplement</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -348,6 +406,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#managesGym">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:comment>manages Gym defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>manages Gym</rdfs:label>
         <rdfs:label xml:lang="en">managesGym</rdfs:label>
     </owl:ObjectProperty>
     
@@ -358,6 +418,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#memberOf">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>member Of defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>member Of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -368,6 +430,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#progressMonitoredBy"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
+        <rdfs:comment>monitors Progress defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>monitors Progress</rdfs:label>
         <rdfs:label xml:lang="en">monitorsProgress</rdfs:label>
     </owl:ObjectProperty>
     
@@ -378,6 +442,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#nutritionPlanIncludedIn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:comment>nutrition Plan Included In defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>nutrition Plan Included In</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -387,6 +453,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#offersClass">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:comment>offers Class defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>offers Class</rdfs:label>
         <rdfs:label xml:lang="en">offersClass</rdfs:label>
     </owl:ObjectProperty>
     
@@ -398,6 +466,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#owns"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner"/>
+        <rdfs:comment>owned By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>owned By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -407,6 +477,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#owns">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
+        <rdfs:comment>owns defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>owns</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -416,6 +488,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#performsExercise">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>performs Exercise defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>performs Exercise</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -425,6 +499,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#progressMonitoredBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:comment>progress Monitored By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>progress Monitored By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -435,6 +511,8 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#tracksProgressRecord"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:comment>progress Tracked By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>progress Tracked By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -444,6 +522,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#recommendedBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Nutritionist"/>
+        <rdfs:comment>recommended By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>recommended By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -453,6 +533,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#requiresEquipment">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+        <rdfs:comment>requires Equipment defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>requires Equipment</rdfs:label>
         <rdfs:label xml:lang="en">requiresEquipment</rdfs:label>
     </owl:ObjectProperty>
     
@@ -465,6 +547,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:comment>supervised By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>supervised By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -474,6 +558,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supervisesMember">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>supervises Member defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>supervises Member</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -483,6 +569,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supplementConsumedBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
+        <rdfs:comment>supplement Consumed By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>supplement Consumed By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -492,6 +580,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supplementIncludedIn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>supplement Included In defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>supplement Included In</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -501,6 +591,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetsGoal">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:comment>targets Goal defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>targets Goal</rdfs:label>
         <rdfs:label xml:lang="en">targetsGoal</rdfs:label>
     </owl:ObjectProperty>
     
@@ -511,6 +603,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#tracksBMI">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord"/>
+        <rdfs:comment>tracks B M I defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>tracks B M I</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -520,6 +614,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#tracksProgressRecord">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:comment>tracks Progress Record defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>tracks Progress Record</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -532,6 +628,8 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
         <rdfs:comment xml:lang="en">Relates a Member to their assigned Trainer.</rdfs:comment>
+        <rdfs:comment>trained By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>trained By</rdfs:label>
         <rdfs:label xml:lang="en">trainedBy</rdfs:label>
     </owl:ObjectProperty>
     
@@ -543,6 +641,8 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Member"/>
         <rdfs:comment xml:lang="en">Inverse of trainedBy. Relates a Trainer to the Member they train.</rdfs:comment>
+        <rdfs:comment>trains defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>trains</rdfs:label>
         <rdfs:label xml:lang="en">trains</rdfs:label>
     </owl:ObjectProperty>
     
@@ -553,6 +653,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#usesEquipment">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+        <rdfs:comment>uses Equipment defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>uses Equipment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -562,6 +664,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#workoutPlanCreatedBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
+        <rdfs:comment>workout Plan Created By defines a relationship between ontology entities.</rdfs:comment>
+        <rdfs:label>workout Plan Created By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -582,6 +686,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMI">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>B M I stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>B M I</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -591,6 +697,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#age">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>age stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>age</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -600,6 +708,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#caloriesBurned">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>calories Burned stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>calories Burned</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -609,6 +719,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#caloriesPerServing">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>calories Per Serving stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>calories Per Serving</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -618,6 +730,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#capacity">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>capacity stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -627,6 +741,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#description">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>description stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -636,6 +752,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#email">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>email stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>email</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -645,6 +763,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#establishedYear">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:comment>established Year stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>established Year</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -654,6 +774,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#exerciseDuration">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>exercise Duration stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>exercise Duration</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -663,6 +785,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#exerciseIntensity">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>exercise Intensity stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>exercise Intensity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -672,6 +796,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#gender">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>gender stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>gender</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -681,6 +807,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#goalTarget">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>goal Target stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>goal Target</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -690,6 +818,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#gymLocation">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>gym Location stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>gym Location</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -699,6 +829,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#height">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>height stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>height</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -708,6 +840,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#joinDate">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>join Date stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>join Date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -717,6 +851,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#membershipDuration">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>membership Duration stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>membership Duration</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -726,6 +862,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#membershipFee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>membership Fee stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>membership Fee</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -735,6 +873,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#name">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>name stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -744,6 +884,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#phoneNumber">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>phone Number stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>phone Number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -753,6 +895,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#progressDate">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>progress Date stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>progress Date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -762,6 +906,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#proteinPerServing">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>protein Per Serving stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>protein Per Serving</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -771,6 +917,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#repetitions">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>repetitions stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>repetitions</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -780,6 +928,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#repsPerSet">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>reps Per Set stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>reps Per Set</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -789,6 +939,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#sessionDate">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>session Date stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>session Date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -798,6 +950,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#sets">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>sets stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>sets</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -807,6 +961,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#specialization">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>specialization stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>specialization</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -816,6 +972,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#supplementDosage">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>supplement Dosage stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>supplement Dosage</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -825,6 +983,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetBMI">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>target B M I stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>target B M I</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -834,6 +994,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#targetWeight">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>target Weight stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>target Weight</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -843,6 +1005,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#weight">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>weight stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>weight</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -852,6 +1016,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#workoutLevel">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>workout Level stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>workout Level</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -861,6 +1027,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#yearsOfExperience">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>years Of Experience stores attribute information in the ontology.</rdfs:comment>
+        <rdfs:label>years Of Experience</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -880,6 +1048,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#AdvancedWorkoutPlan">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:comment>Advanced Workout Plan is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Advanced Workout Plan</rdfs:label>
     </owl:Class>
     
 
@@ -888,6 +1058,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BMIRecord">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:comment>B M I Record is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>B M I Record</rdfs:label>
     </owl:Class>
     
 
@@ -896,6 +1068,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BasicMembership">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:comment>Basic Membership is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Basic Membership</rdfs:label>
     </owl:Class>
     
 
@@ -904,6 +1078,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BeginnerWorkoutPlan">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:comment>Beginner Workout Plan is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Beginner Workout Plan</rdfs:label>
     </owl:Class>
     
 
@@ -912,6 +1088,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#BodyBuilding">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:comment>Body Building is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Body Building</rdfs:label>
     </owl:Class>
     
 
@@ -920,6 +1098,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>Cardio Exercise is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Cardio Exercise</rdfs:label>
     </owl:Class>
     
 
@@ -928,6 +1108,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#CardioMachine">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+        <rdfs:comment>Cardio Machine is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Cardio Machine</rdfs:label>
     </owl:Class>
     
 
@@ -935,6 +1117,8 @@
     <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan">
+        <rdfs:comment>Diet Plan is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Diet Plan</rdfs:label>
         <rdfs:label xml:lang="en">DietPlan</rdfs:label>
     </owl:Class>
     
@@ -944,6 +1128,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Endurance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:comment>Endurance is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Endurance</rdfs:label>
     </owl:Class>
     
 
@@ -951,6 +1137,8 @@
     <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment">
+        <rdfs:comment>Equipment is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Equipment</rdfs:label>
         <rdfs:label xml:lang="en">Equipment</rdfs:label>
     </owl:Class>
     
@@ -960,6 +1148,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise">
         <rdfs:comment xml:lang="en">A physical activity performed as part of a workout plan.</rdfs:comment>
+        <rdfs:comment>Exercise is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Exercise</rdfs:label>
         <rdfs:label xml:lang="en">Exercise</rdfs:label>
     </owl:Class>
     
@@ -969,6 +1159,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FatLoss">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:comment>Fat Loss is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Fat Loss</rdfs:label>
     </owl:Class>
     
 
@@ -976,6 +1168,8 @@
     <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal">
+        <rdfs:comment>Fitness Goal is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Fitness Goal</rdfs:label>
         <rdfs:label xml:lang="en">FitnessGoal</rdfs:label>
     </owl:Class>
     
@@ -985,6 +1179,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FlexibilityExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>Flexibility Exercise is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Flexibility Exercise</rdfs:label>
     </owl:Class>
     
 
@@ -993,6 +1189,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FreeWeightEquipment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+        <rdfs:comment>Free Weight Equipment is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Free Weight Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -1001,6 +1199,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Gym">
         <rdfs:comment xml:lang="en">A physical fitness facility where members exercise.</rdfs:comment>
+        <rdfs:comment>Gym is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Gym</rdfs:label>
         <rdfs:label xml:lang="en">Gym</rdfs:label>
     </owl:Class>
     
@@ -1010,6 +1210,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#GymOwner">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
+        <rdfs:comment>Gym Owner is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Gym Owner</rdfs:label>
         <rdfs:label xml:lang="en">GymOwner</rdfs:label>
     </owl:Class>
     
@@ -1019,6 +1221,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HIITExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>H I I T Exercise is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>H I I T Exercise</rdfs:label>
     </owl:Class>
     
 
@@ -1026,6 +1230,8 @@
     <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord">
+        <rdfs:comment>Health Record is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Health Record</rdfs:label>
         <rdfs:label xml:lang="en">HealthRecord</rdfs:label>
     </owl:Class>
     
@@ -1035,6 +1241,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HighProteinDiet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>High Protein Diet is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>High Protein Diet</rdfs:label>
     </owl:Class>
     
 
@@ -1043,6 +1251,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#IntermediateWorkoutPlan">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan"/>
+        <rdfs:comment>Intermediate Workout Plan is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Intermediate Workout Plan</rdfs:label>
     </owl:Class>
     
 
@@ -1051,6 +1261,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#KetoDiet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>Keto Diet is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Keto Diet</rdfs:label>
     </owl:Class>
     
 
@@ -1059,6 +1271,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MachineEquipment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+        <rdfs:comment>Machine Equipment is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Machine Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -1067,6 +1281,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MassGainer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:comment>Mass Gainer is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Mass Gainer</rdfs:label>
     </owl:Class>
     
 
@@ -1077,6 +1293,8 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
         <rdfs:comment xml:lang="en">A person with an active or past gym membership.</rdfs:comment>
+        <rdfs:comment>Member is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Member</rdfs:label>
         <rdfs:label xml:lang="en">Member</rdfs:label>
     </owl:Class>
     
@@ -1085,6 +1303,8 @@
     <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership">
+        <rdfs:comment>Membership is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Membership</rdfs:label>
         <rdfs:label xml:lang="en">Membership</rdfs:label>
     </owl:Class>
     
@@ -1094,6 +1314,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGain">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:comment>Muscle Gain is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Muscle Gain</rdfs:label>
     </owl:Class>
     
 
@@ -1102,6 +1324,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#MuscleGainDiet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>Muscle Gain Diet is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Muscle Gain Diet</rdfs:label>
     </owl:Class>
     
 
@@ -1110,6 +1334,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Nutritionist">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
+        <rdfs:comment>Nutritionist is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Nutritionist</rdfs:label>
         <rdfs:label xml:lang="en">Nutritionist</rdfs:label>
     </owl:Class>
     
@@ -1118,6 +1344,8 @@
     <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person">
+        <rdfs:comment>Person is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
         <rdfs:label xml:lang="en">Person</rdfs:label>
     </owl:Class>
     
@@ -1127,6 +1355,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PreWorkoutSupplement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:comment>Pre Workout Supplement is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Pre Workout Supplement</rdfs:label>
     </owl:Class>
     
 
@@ -1135,6 +1365,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#PremiumMembership">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:comment>Premium Membership is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Premium Membership</rdfs:label>
     </owl:Class>
     
 
@@ -1143,6 +1375,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ProteinSupplement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:comment>Protein Supplement is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Protein Supplement</rdfs:label>
     </owl:Class>
     
 
@@ -1151,6 +1385,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#ResistanceEquipment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Equipment"/>
+        <rdfs:comment>Resistance Equipment is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Resistance Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -1160,6 +1396,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Person"/>
         <rdfs:comment xml:lang="en">Any person employed by or operating a gym (trainers, nutritionists, owners).</rdfs:comment>
+        <rdfs:comment>Staff is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Staff</rdfs:label>
         <rdfs:label xml:lang="en">Staff</rdfs:label>
     </owl:Class>
     
@@ -1169,6 +1407,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#StrengthExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>Strength Exercise is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Strength Exercise</rdfs:label>
     </owl:Class>
     
 
@@ -1176,6 +1416,8 @@
     <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement">
+        <rdfs:comment>Supplement is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Supplement</rdfs:label>
         <rdfs:label xml:lang="en">Supplement</rdfs:label>
     </owl:Class>
     
@@ -1186,6 +1428,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Trainer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Staff"/>
         <rdfs:comment xml:lang="en">A certified fitness professional who designs and supervises workout plans.</rdfs:comment>
+        <rdfs:comment>Trainer is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Trainer</rdfs:label>
         <rdfs:label xml:lang="en">Trainer</rdfs:label>
     </owl:Class>
     
@@ -1195,6 +1439,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VIPMembership">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Membership"/>
+        <rdfs:comment>V I P Membership is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>V I P Membership</rdfs:label>
     </owl:Class>
     
 
@@ -1203,6 +1449,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VeganDiet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>Vegan Diet is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Vegan Diet</rdfs:label>
     </owl:Class>
     
 
@@ -1211,6 +1459,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#VitaminSupplement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Supplement"/>
+        <rdfs:comment>Vitamin Supplement is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Vitamin Supplement</rdfs:label>
     </owl:Class>
     
 
@@ -1219,6 +1469,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLoss">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#FitnessGoal"/>
+        <rdfs:comment>Weight Loss is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Weight Loss</rdfs:label>
     </owl:Class>
     
 
@@ -1227,6 +1479,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightLossDiet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#DietPlan"/>
+        <rdfs:comment>Weight Loss Diet is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Weight Loss Diet</rdfs:label>
     </owl:Class>
     
 
@@ -1235,6 +1489,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WeightRecord">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:comment>Weight Record is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Weight Record</rdfs:label>
     </owl:Class>
     
 
@@ -1242,6 +1498,8 @@
     <!-- http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutPlan">
+        <rdfs:comment>Workout Plan is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Workout Plan</rdfs:label>
         <rdfs:label xml:lang="en">WorkoutPlan</rdfs:label>
     </owl:Class>
     
@@ -1251,6 +1509,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#WorkoutProgress">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#HealthRecord"/>
+        <rdfs:comment>Workout Progress is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Workout Progress</rdfs:label>
     </owl:Class>
     
 
@@ -1259,6 +1519,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#YogaExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nouman/ontologies/2026/4/gym-fitness#Exercise"/>
+        <rdfs:comment>Yoga Exercise is a class in the gym and fitness ontology.</rdfs:comment>
+        <rdfs:label>Yoga Exercise</rdfs:label>
     </owl:Class>
     
 
